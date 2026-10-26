@@ -19,7 +19,7 @@ def chequear_salud():
     """Devuelve un diccionario con el uso de CPU/memoria/disco y alertas si corresponde."""
     if not PSUTIL_DISPONIBLE:
         return {
-            "error": "El módulo 'psutil' no está instalado. Instalalo con: pip install psutil"
+            "error": "El módulo 'psutil' no está instalado. Instalalo corriendo lo siguiente en tu terminal: py -m pip install -r requirements.txt"
         }
 
     cpu = psutil.cpu_percent(interval=1)
